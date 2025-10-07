@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eatom - Leading renewable energy solutions for a sustainable future">
+    <meta name="keywords" content="renewable energy, sustainable solutions, Eatom energy, nuclear fusion">
+    <meta name="author" content="Eatom Team">
+    <title>Official Website - Eatom</title>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Roboto&display=swap" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" defer>
+    <link rel="stylesheet" href="website-style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <span class="letter" data-color="#ff0000">E</span>
+            <span class="letter" data-color="#ff69b4">a</span>
+            <span class="letter" data-color="#00ff00">t</span>
+            <span class="letter" data-color="#ffff00">o</span>
+            <span class="letter" data-color="#0000ff">m</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#calculations">Calculations</a></li>
+            <li><a href="#creativity">Our Creativity</a></li>
+            <li><a href="#gravographs">Gravographs</a></li>
+            <li><a href="#glow">Glow</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="content">
+            <h1 class="title" data-text="Welcome to Eatom">Welcome to Eatom</h1>
+            <p class="subtitle">Pioneering Nuclear Fusion Technology</p>
+            <a href="#about" class="cta-button"><i class="fas fa-arrow-down"></i> Explore Now</a>
+        </div>
+        <div class="background-space">
+            <canvas id="particle-canvas" aria-hidden="true"></canvas>
+        </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section class="calculations" id="calculations">
+        <h2 class="reveal-text">Calculations</h2>
+        <p class="calculations-intro">Calculate the power of Nuclear Fission and Fusion with Eatom's advanced tools.</p>
+        <div class="calculations-cards">
+            <div class="calculation-card" data-type="fission">
+                <div class="card-front">
+                    <i class="fas fa-atom card-icon"></i>
+                    <h3>Nuclear Fission</h3>
+                    <p>Split atoms to unleash energy.</p>
+                </div>
+                <div class="card-back">
+                    <p class="calculate-now">Calculate Now!</p>
+                </div>
+            </div>
+            <div class="calculation-card" data-type="fusion">
+                <div class="card-front">
+                    <i class="fas fa-sun card-icon"></i>
+                    <h3>Nuclear Fusion</h3>
+                    <p>Fuse atoms for limitless power.</p>
+                </div>
+                <div class="card-back">
+                    <p class="calculate-now">Calculate Now!</p>
+                </div>
+            </div>
+        </div>
+        <div class="calculation-form" id="calculation-form" style="display: none;">
+            <div class="form-container" id="calculation-form-container"></div>
+            <button class="calculation-back-btn" id="calculation-back-btn" style="display: none;"><i class="fas fa-arrow-left"></i> Back</button>
+        </div>
+        <div class="calculations-background" aria-hidden="true"></div>
+    </section>
+    <!-- Separator Above Creativity -->
+    <div class="section-separator" data-direction="top"></div>
+
+    <!-- Creativity Section -->
+    <section class="creativity" id="creativity">
+        <div class="creativity-background"></div>
+        <div class="creativity-container">
+            <h2 class="creativity-title">Welcome</h2>
+            <div class="creativity-input-wrapper">
+                <input type="text" id="creativity-input" placeholder="Enter Your Name">
+                <button class="creativity-btn" id="creativity-submit"><i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div class="creativity-content" id="creativity-content" style="display: none;">
+                <div class="info-container">
+                    <div class="info-text" id="info-text"></div>
+                    <div class="info-video" id="info-video"></div>
+                </div>
+                <button class="creativity-back-btn" id="creativity-back-btn" style="display: none;"><i class="fas fa-arrow-left"></i> Back</button>
+            </div>
+            <select id="creativity-options" style="display: none;" class="creativity-select">
+                <option value="" disabled selected>What Do You Want to See?</option>
+                <option value="fission">Nuclear Fission</option>
+                <option value="fusion">Nuclear Fusion</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Separator Below Creativity -->
+    <div class="section-separator" data-direction="bottom"></div>
+
+    <!-- Separator Above Gravographs -->
+    <div class="section-separator" data-direction="top"></div>
+
+    <!-- Gravographs Section -->
+    <section class="gravographs" id="gravographs">
+        <div class="gravographs-background"></div>
+        <div class="gravographs-container">
+            <h2 class="gravographs-title">GRAVOGRAPHS UNLEASHED</h2>
+            <p class="gravographs-subtitle">Where Innovation Meets Infinite Possibilities</p>
+            <div class="energy-chart-wrapper">
+                <canvas id="energyChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Separator Below Gravographs -->
+    <div class="section-separator" data-direction="bottom"></div>
+
+    <!-- Separator Above Glow -->
+    <div class="section-separator" data-direction="top"></div>
+
+    <!-- Glow Section -->
+    <section class="glow" id="glow">
+        <div class="glow-background"></div>
+        <div class="glow-container">
+            <h2 class="glow-title">Join Us By Your Skill</h2>
+            <div class="glow-input-wrapper">
+                <input type="text" id="glow-input" placeholder="Enter Your Skill" list="skills-list">
+                <button class="glow-btn" id="glow-submit"><i class="fas fa-arrow-right"></i></button>
+            </div>
+            <datalist id="skills-list">
+                <option value="Nuclear Fusion Research">
+                <option value="Quantum Computing">
+                <option value="AI Development">
+                <option value="Sustainable Energy Design">
+                <option value="Advanced Robotics">
+            </datalist>
+            <button class="glow-back-btn" id="glow-back-btn" style="display: none; margin-top: 20px;"><i class="fas fa-arrow-left"></i> Back</button>
+        </div>
+    </section>
+
+    <!-- Separator Below Glow -->
+    <div class="section-separator" data-direction="bottom"></div>
+
+   <!-- Contact Section -->
+<section class="contact" id="contact">
+    <div class="contact-background"></div>
+    <div class="contact-container">
+        <h2 class="contact-title">Contact</h2>
+        <p class="contact-subtitle">Contact Eatom</p>
+        <div class="contact-buttons">
+            <a href="#" class="cta-button" id="send-message-btn"><i class="fas fa-envelope"></i> Send Message</a>
+            <a href="https://www.google.com/maps/place/123+Future+St,+Tech+City,+Egypt" target="_blank" class="cta-button" id="view-map-btn"><i class="fas fa-map-marker-alt"></i> View Map</a>
+        </div>
+        <div class="contact-form" id="contact-form" style="display: none;">
+            <div class="form-container">
+                <div class="form-box">
+                    <div class="form-field">
+                        <input type="text" id="contact-name" placeholder="Your Name" class="contact-input">
+                    </div>
+                    <div class="form-field">
+                        <input type="email" id="contact-email" placeholder="Your Email" class="contact-input">
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    <div class="form-field">
+                        <textarea id="contact-message" placeholder="Your Message" class="contact-input" rows="5"></textarea>
+                    </div>
+                </div>
+                <button class="cta-button" id="contact-submit"><i class="fas fa-paper-plane"></i> Submit</button>
+            </div>
+            <div class="contact-response" id="contact-response" style="display: none;">
+                <button class="cta-button" id="response-view-map-btn"><i class="fas fa-map-marker-alt"></i> View Map</button>
+                <button class="contact-back-btn" id="contact-back-btn"><i class="fas fa-arrow-left"></i> Back</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>All Rights Reserved © 2025 Eatom</p>
+        <p>Made by Kareem Ramy</p>
+    </footer>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button id="theme-btn"><i class="fas fa-moon"></i></button>
+    </div>
+
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loading-text">LOADING EATOM</div>
+        <div class="loading-bar"></div>
+    </div>
+
+    <!-- Chatbot Container -->
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <span>Eatom AI Assistant</span>
+            <button class="chatbot-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages"></div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbot-input" placeholder="Ask me anything...">
+            <button id="chatbot-submit"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    <button class="chatbot-toggle"><i class="fas fa-robot"></i></button>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="website-script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Chart لـ Gravographs
+            const ctx = document.getElementById('energyChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Nuclear Fusion', 'Renewable Energy', 'Other Sources'],
+                    datasets: [{
+                        label: 'Energy Production by Eatom',
+                        data: [60, 30, 10],
+                        backgroundColor: [
+                            'rgba(38, 166, 154, 0.8)',
+                            'rgba(29, 185, 151, 0.8)',
+                            'rgba(244, 162, 97, 0.8)'
+                        ],
+                        borderColor: [
+                            'rgba(38, 166, 154, 1)',
+                            'rgba(29, 185, 151, 1)',
+                            'rgba(244, 162, 97, 1)'
+                        ],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                font: { size: 14, family: 'Montserrat' },
+                                color: '#333'
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            titleFont: { family: 'Montserrat' },
+                            bodyFont: { family: 'Montserrat' }
+                        }
+                    },
+                    animation: {
+                        animateScale: true,
+                        animateRotate: true
+                    }
+                }
+            });
+
+            // Logic لـ Creativity Back Button
+            const creativityTitle = document.querySelector('.creativity-title');
+            const creativityInput = document.getElementById('creativity-input');
+            const creativitySubmit = document.getElementById('creativity-submit');
+            const creativityOptions = document.getElementById('creativity-options');
+            const creativityContent = document.getElementById('creativity-content');
+            const creativityBackBtn = document.getElementById('creativity-back-btn');
+            let creativityStep = 1;
+            let creativityUserName = '';
+
+            creativitySubmit.addEventListener('click', () => {
+                if (creativityStep === 1 && creativityInput.value.trim() !== '') {
+                    creativityUserName = creativityInput.value.trim();
+                    creativityTitle.style.opacity = '0';
+                    setTimeout(() => {
+                        creativityTitle.textContent = `Welcome to Our Creative World, ${creativityUserName}`;
+                        creativityTitle.style.opacity = '1';
+                        creativityInput.style.display = 'none';
+                        creativitySubmit.style.display = 'none';
+                        creativityOptions.style.display = 'block';
+                    }, 500);
+                    creativityStep = 2;
+                }
+            });
+
+            creativityOptions.addEventListener('change', () => {
+                const selectedOption = creativityOptions.value;
+                creativityOptions.style.display = 'none';
+                creativityContent.style.display = 'block';
+                creativityBackBtn.style.display = 'block';
+
+                if (selectedOption === 'fission') {
+                    infoText.innerHTML = `
+                        <h3>Nuclear Fission</h3>
+                        <p>Nuclear fission is a process where the nucleus of an atom splits into two or more smaller nuclei, releasing a large amount of energy. This process is used in nuclear power plants to generate electricity and in nuclear weapons.</p>
+                    `;
+                    infoVideo.innerHTML = `
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/1U6Nzcv9VLE" title="Nuclear Fission Explained" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    `;
+                } else if (selectedOption === 'fusion') {
+                    infoText.innerHTML = `
+                        <h3>Nuclear Fusion</h3>
+                        <p>Nuclear fusion is the process where two light atomic nuclei combine to form a heavier nucleus, releasing energy in the process. This is the process that powers stars, including the Sun.</p>
+                    `;
+                    infoVideo.innerHTML = `
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/mZsaaturR6E" title="Nuclear Fusion Explained" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    `;
+                }
+            });
+
+            creativityBackBtn.addEventListener('click', () => {
+                if (creativityStep === 2) {
+                    creativityContent.style.display = 'none';
+                    creativityBackBtn.style.display = 'none';
+                    creativityOptions.style.display = 'none';
+                    creativityInput.style.display = 'block';
+                    creativitySubmit.style.display = 'block';
+                    creativityTitle.style.opacity = '0';
+                    setTimeout(() => {
+                        creativityTitle.textContent = 'Welcome';
+                        creativityTitle.style.opacity = '1';
+                    }, 500);
+                    creativityStep = 1;
+                }
+            });
+
+     // Logic لـ Contact Section
+// Logic لـ Contact Section
+const contactTitle = document.querySelector('.contact-title');
+const contactSubtitle = document.querySelector('.contact-subtitle');
+const contactButtons = document.querySelector('.contact-buttons');
+const contactForm = document.getElementById('contact-form');
+const contactResponse = document.getElementById('contact-response');
+const sendMessageBtn = document.getElementById('send-message-btn');
+const contactSubmit = document.getElementById('contact-submit');
+const contactBackBtn = document.getElementById('contact-back-btn');
+const responseViewMapBtn = document.getElementById('response-view-map-btn');
+const emailError = document.getElementById('email-error');
+let contactStep = 1;
+
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+sendMessageBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (contactStep === 1) {
+        contactButtons.style.display = 'none';
+        contactForm.style.display = 'block';
+        contactBackBtn.style.display = 'block';
+        contactStep = 2;
+    }
+});
+
+contactSubmit.addEventListener('click', () => {
+    const name = document.getElementById('contact-name').value.trim();
+    const email = document.getElementById('contact-email').value.trim();
+    const message = document.getElementById('contact-message').value.trim();
+
+    // Reset error message
+    emailError.classList.remove('active');
+
+    // Check all fields
+    if (!name || !email || !message) {
+        if (!email) {
+            emailError.textContent = 'Email is required!';
+            emailError.classList.add('active');
+        } else if (!isValidEmail(email)) {
+            emailError.textContent = 'Please enter a valid email address!';
+            emailError.classList.add('active');
+        }
+        return; // Stop here if any field is invalid
+    }
+
+    if (!isValidEmail(email)) {
+        emailError.textContent = 'Please enter a valid email address!';
+        emailError.classList.add('active');
+        return; // Stop here if email is invalid
+    }
+
+    // If everything is valid, proceed
+    contactTitle.style.opacity = '0';
+    setTimeout(() => {
+        contactTitle.textContent = 'Eatom will care of your review';
+        contactTitle.style.opacity = '1';
+        contactForm.style.display = 'none';
+        contactSubtitle.style.display = 'none';
+        contactResponse.style.display = 'flex'; // Ensure View Map and Back buttons appear
+        contactBackBtn.style.display = 'block';
+        console.log('Form submitted, response should be visible'); // Debugging
+    }, 500);
+    contactStep = 3;
+});
+
+responseViewMapBtn.addEventListener('click', () => {
+    window.open('https://www.google.com/maps/place/123+Future+St,+Tech+City,+Egypt', '_blank');
+});
+
+contactBackBtn.addEventListener('click', () => {
+    if (contactStep === 2) {
+        contactForm.style.display = 'none';
+        contactBackBtn.style.display = 'none';
+        contactButtons.style.display = 'flex';
+        contactStep = 1;
+        emailError.classList.remove('active');
+    } else if (contactStep === 3) {
+        contactTitle.style.opacity = '0';
+        setTimeout(() => {
+            contactTitle.textContent = 'Contact';
+            contactTitle.style.opacity = '1';
+            contactSubtitle.style.display = 'block';
+            contactButtons.style.display = 'flex';
+            contactResponse.style.display = 'none';
+            contactBackBtn.style.display = 'none';
+        }, 500);
+        contactStep = 1;
+    }
+});
+
+contactSubmit.addEventListener('click', () => {
+    const name = document.getElementById('contact-name').value.trim();
+    const email = document.getElementById('contact-email').value.trim();
+    const message = document.getElementById('contact-message').value.trim();
+
+    emailError.classList.remove('active');
+
+    if (name && email && message) {
+        if (isValidEmail(email)) {
+            contactTitle.style.opacity = '0';
+            setTimeout(() => {
+                contactTitle.textContent = 'Eatom will care of your review';
+                contactTitle.style.opacity = '1';
+                contactForm.style.display = 'none';
+                contactSubtitle.style.display = 'none';
+                contactResponse.style.display = 'flex';
+                contactBackBtn.style.display = 'block';
+            }, 500);
+            contactStep = 3;
+        } else {
+            emailError.textContent = 'Please enter a valid email address!';
+            emailError.classList.add('active');
+        }
+    } else {
+        if (!email) {
+            emailError.textContent = 'Email is required!';
+            emailError.classList.add('active');
+        } else if (!isValidEmail(email)) {
+            emailError.textContent = 'Please enter a valid email address!';
+            emailError.classList.add('active');
+        }
+    }
+});
+
+responseViewMapBtn.addEventListener('click', () => {
+    window.open('https://www.google.com/maps/place/123+Future+St,+Tech+City,+Egypt', '_blank');
+});
+
+contactBackBtn.addEventListener('click', () => {
+    if (contactStep === 2) {
+        contactForm.style.display = 'none';
+        contactBackBtn.style.display = 'none';
+        contactButtons.style.display = 'flex';
+        contactStep = 1;
+        emailError.classList.remove('active');
+    } else if (contactStep === 3) {
+        contactTitle.style.opacity = '0';
+        setTimeout(() => {
+            contactTitle.textContent = 'Contact';
+            contactTitle.style.opacity = '1';
+            contactSubtitle.style.display = 'block';
+            contactButtons.style.display = 'flex';
+            contactResponse.style.display = 'none';
+            contactBackBtn.style.display = 'none';
+        }, 500);
+        contactStep = 1;
+    }
+});
+
+            contactSubmit.addEventListener('click', () => {
+                const name = document.getElementById('contact-name').value.trim();
+                const email = document.getElementById('contact-email').value.trim();
+                const message = document.getElementById('contact-message').value.trim();
+
+                if (name && email && message) {
+                    contactTitle.style.opacity = '0';
+                    setTimeout(() => {
+                        contactTitle.textContent = 'Eatom will care of your review';
+                        contactTitle.style.opacity = '1';
+                        contactForm.style.display = 'none';
+                        contactSubtitle.style.display = 'none';
+                        contactBackBtn.style.display = 'block';
+                    }, 500);
+                    contactStep = 3;
+                }
+            });
+
+            contactBackBtn.addEventListener('click', () => {
+                if (contactStep === 2) {
+                    contactForm.style.display = 'none';
+                    contactBackBtn.style.display = 'none';
+                    contactButtons.style.display = 'flex';
+                    contactStep = 1;
+                } else if (contactStep === 3) {
+                    contactTitle.style.opacity = '0';
+                    setTimeout(() => {
+                        contactTitle.textContent = 'Contact';
+                        contactTitle.style.opacity = '1';
+                        contactSubtitle.style.display = 'block';
+                        contactButtons.style.display = 'flex';
+                        contactBackBtn.style.display = 'none';
+                    }, 500);
+                    contactStep = 1;
+                }
+            });
+
+            // Logic لـ Glow Back Button
+            const glowTitle = document.querySelector('.glow-title');
+            const glowInput = document.getElementById('glow-input');
+            const glowSubmit = document.getElementById('glow-submit');
+            const glowBackBtn = document.getElementById('glow-back-btn');
+            let step = 1;
+            let userName = '';
+            let userSkill = '';
+
+            glowInput.addEventListener('input', () => {
+                if (step === 1) {
+                    const inputValue = glowInput.value.trim().toLowerCase();
+                    const datalist = document.getElementById('skills-list');
+                    datalist.innerHTML = '';
+                    const filteredSkills = availableSkills.filter(skill =>
+                        skill.toLowerCase().includes(inputValue)
+                    ).slice(0, 5);
+                    filteredSkills.forEach(skill => {
+                        const option = document.createElement('option');
+                        option.value = skill;
+                        datalist.appendChild(option);
+                    });
+                }
+            });
+            // Logic لـ Calculations Section
+const calcCards = document.querySelectorAll('.calculation-card');
+const calcForm = document.getElementById('calculation-form');
+const calcFormContainer = document.getElementById('calculation-form-container');
+const calcBackBtn = document.getElementById('calculation-back-btn');
+let calcStep = 1;
+let calcType = '';
+
+calcCards.forEach(card => {
+    card.addEventListener('click', () => {
+        calcType = card.getAttribute('data-type');
+        calcCards.forEach(c => c.style.display = 'none');
+        calcForm.style.display = 'block';
+        calcBackBtn.style.display = 'block';
+        calcStep = 2;
+
+        if (calcType === 'fission') {
+            calcFormContainer.innerHTML = `
+                <div class="form-box">
+                    <h3 class="form-title">Nuclear Fission Calculator</h3>
+                    <div class="form-field">
+                        <select id="fission-atoms" class="calc-input">
+                            <option value="" disabled selected>Number of Atoms</option>
+                            <option value="1000">1,000</option>
+                            <option value="5000">5,000</option>
+                            <option value="10000">10,000</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <select id="fission-type" class="calc-input">
+                            <option value="" disabled selected>Type of Atoms</option>
+                            <option value="U-235">Uranium-235</option>
+                            <option value="Pu-239">Plutonium-239</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <select id="fission-speed" class="calc-input">
+                            <option value="" disabled selected>Speed (MeV)</option>
+                            <option value="1">1 MeV</option>
+                            <option value="2">2 MeV</option>
+                            <option value="3">3 MeV</option>
+                        </select>
+                    </div>
+                    <button class="cta-button calc-submit" id="fission-submit"><i class="fas fa-calculator"></i> Send</button>
+                </div>
+                <div class="calc-result" id="fission-result" style="display: none;"></div>
+            `;
+        } else if (calcType === 'fusion') {
+            calcFormContainer.innerHTML = `
+                <div class="form-box">
+                    <h3 class="form-title">Nuclear Fusion Calculator</h3>
+                    <div class="form-field">
+                        <select id="fusion-atoms" class="calc-input">
+                            <option value="" disabled selected>Number of Atoms</option>
+                            <option value="1000">1,000</option>
+                            <option value="5000">5,000</option>
+                            <option value="10000">10,000</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <select id="fusion-type" class="calc-input">
+                            <option value="" disabled selected>Type of Atoms</option>
+                            <option value="H-2">Deuterium (H-2)</option>
+                            <option value="H-3">Tritium (H-3)</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <select id="fusion-speed" class="calc-input">
+                            <option value="" disabled selected>Speed (MeV)</option>
+                            <option value="10">10 MeV</option>
+                            <option value="20">20 MeV</option>
+                            <option value="30">30 MeV</option>
+                        </select>
+                    </div>
+                    <button class="cta-button calc-submit" id="fusion-submit"><i class="fas fa-calculator"></i> Send</button>
+                </div>
+                <div class="calc-result" id="fusion-result" style="display: none;"></div>
+            `;
+        }
+
+        const calcSubmit = document.querySelector('.calc-submit');
+        const calcResult = document.querySelector('.calc-result');
+
+        calcSubmit.addEventListener('click', () => {
+            let atoms, type, speed, energy;
+
+            if (calcType === 'fission') {
+                atoms = document.getElementById('fission-atoms').value;
+                type = document.getElementById('fission-type').value;
+                speed = document.getElementById('fission-speed').value;
+                energy = atoms * speed * 0.1; // معادلة بسيطة للحساب
+            } else if (calcType === 'fusion') {
+                atoms = document.getElementById('fusion-atoms').value;
+                type = document.getElementById('fusion-type').value;
+                speed = document.getElementById('fusion-speed').value;
+                energy = atoms * speed * 0.2; // معادلة بسيطة للحساب
+            }
+
+            if (atoms && type && speed) {
+                calcFormContainer.querySelector('.form-box').style.display = 'none';
+                calcResult.style.display = 'block';
+                calcResult.innerHTML = `
+                    <h3 class="result-title">Result: ${energy.toFixed(2)} MeV</h3>
+                    <p class="result-text">Calculated for ${atoms} ${type} atoms at ${speed} MeV</p>
+                `;
+                calcResult.classList.add('visible');
+                calcStep = 3;
+            }
+        });
+    });
+});
+
+calcBackBtn.addEventListener('click', () => {
+    if (calcStep === 2) {
+        calcForm.style.display = 'none';
+        calcBackBtn.style.display = 'none';
+        calcCards.forEach(card => card.style.display = 'block');
+        calcStep = 1;
+    } else if (calcStep === 3) {
+        const calcResult = document.querySelector('.calc-result');
+        calcResult.style.display = 'none';
+        calcFormContainer.querySelector('.form-box').style.display = 'block';
+        calcStep = 2;
+    }
+});
+
+            glowSubmit.addEventListener('click', () => {
+                if (step === 1 && glowInput.value.trim() !== '') {
+                    userSkill = glowInput.value.trim().toLowerCase();
+                    let response = skillResponses['default'];
+                    for (let skill in skillResponses) {
+                        if (userSkill.includes(skill)) {
+                            response = skillResponses[skill];
+                            break;
+                        }
+                    }
+                    glowTitle.style.opacity = '0';
+                    setTimeout(() => {
+                        glowTitle.textContent = response;
+                        glowTitle.style.opacity = '1';
+                        glowInput.value = '';
+                        glowInput.placeholder = 'Enter Your Name';
+                        glowInput.removeAttribute('list');
+                        glowBackBtn.style.display = 'block';
+                    }, 500);
+                    step = 2;
+                } else if (step === 2 && glowInput.value.trim() !== '') {
+                    userName = glowInput.value.trim();
+                    glowTitle.style.opacity = '0';
+                    setTimeout(() => {
+                        glowTitle.textContent = `Hi ${userName}`;
+                        glowTitle.style.opacity = '1';
+                        glowInput.value = '';
+                        glowInput.placeholder = 'Share Your Idea';
+                        glowBackBtn.style.display = 'block';
+                    }, 500);
+                    step = 3;
+                } else if (step === 3 && glowInput.value.trim() !== '') {
+                    const userIdea = glowInput.value.trim().toLowerCase();
+                    let ideaResponse = ideaResponses['default'];
+                    for (let keyword in ideaResponses) {
+                        if (userIdea.includes(keyword)) {
+                            ideaResponse = ideaResponses[keyword];
+                            break;
+                        }
+                    }
+                    glowTitle.style.opacity = '0';
+                    setTimeout(() => {
+                        glowTitle.textContent = `${ideaResponse} The Admin Will Review Your Idea`;
+                        glowTitle.style.opacity = '1';
+                        glowTitle.style.fontSize = '3em';
+                        glowTitle.style.textShadow = '0 0 30px var(--primary-color)';
+                        glowInput.style.transform = 'translateY(20px)';
+                        glowInput.style.opacity = '0';
+                        glowSubmit.style.transform = 'translateY(20px)';
+                        glowSubmit.style.opacity = '0';
+                        glowBackBtn.style.display = 'block';
+                    }, 500);
+                    step = 4;
+                }
+            });
+
+            glowBackBtn.addEventListener('click', () => {
+                if (step === 2) {
+                    glowTitle.style.opacity = '0';
+                    setTimeout(() => {
+                        glowTitle.textContent = 'Join Us By Your Skill';
+                        glowTitle.style.opacity = '1';
+                        glowInput.value = '';
+                        glowInput.placeholder = 'Enter Your Skill';
+                        glowInput.style.transform = 'translateY(0)';
+                        glowInput.style.opacity = '1';
+                        glowSubmit.style.transform = 'translateY(0)';
+                        glowSubmit.style.opacity = '1';
+                        glowBackBtn.style.display = 'none';
+                    }, 500);
+                    step = 1;
+                } else if (step === 3) {
+                    glowTitle.style.opacity = '0';
+                    setTimeout(() => {
+                        glowTitle.textContent = skillResponses[userSkill.includes('default') ? 'default' : userSkill];
+                        glowTitle.style.opacity = '1';
+                        glowInput.value = '';
+                        glowInput.placeholder = 'Enter Your Name';
+                        glowBackBtn.style.display = 'none';
+                    }, 500);
+                    step = 2;
+                } else if (step === 4) {
+                    glowTitle.style.opacity = '0';
+                    setTimeout(() => {
+                        glowTitle.textContent = `Hi ${userName}`;
+                        glowTitle.style.opacity = '1';
+                        glowInput.style.transform = 'translateY(0)';
+                        glowInput.style.opacity = '1';
+                        glowSubmit.style.transform = 'translateY(0)';
+                        glowSubmit.style.opacity = '1';
+                        glowTitle.style.fontSize = '5em';
+                        glowTitle.style.textShadow = '0 0 20px rgba(var(--secondary-color), 0.5)';
+                        glowBackBtn.style.display = 'none';
+                    }, 500);
+                    step = 3;
+                }
+            });
+
+            const skillResponses = {
+                'nuclear fusion': 'Your expertise in Nuclear Fusion is groundbreaking! We’d love to hear your ideas.',
+                'quantum computing': 'Quantum Computing is the future! Share your vision with us.',
+                'ai': 'AI Development is a game-changer. What’s your next big idea?',
+                'sustainable energy': 'Sustainable Energy Design is our passion too! Tell us more.',
+                'robotics': 'Advanced Robotics could transform the world. What’s your concept?',
+                'default': 'That’s an amazing skill! Let’s see how you can contribute.'
+            };
+
+            const availableSkills = [
+                'Nuclear Fusion Research',
+                'Quantum Computing',
+                'AI Development',
+                'Sustainable Energy Design',
+                'Advanced Robotics'
+            ];
+
+            const ideaResponses = {
+                'energy': 'Your idea could revolutionize energy solutions!',
+                'tech': 'This tech-focused idea is incredibly innovative!',
+                'research': 'A research-driven concept—brilliant!',
+                'design': 'Your design approach is visionary!',
+                'robot': 'Robotics in this idea? Mind-blowing!',
+                'default': 'What a creative idea! We’re excited to explore it.'
+            };
+        });
+    </script>
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" title="Back to Top"><i class="fas fa-chevron-up"></i></button>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+th =e funak parr if the mosg rejectedf if rgt e vmq eefn dv viNE ne lv, knk N gkc  ,ww  kn  kK   gbjBDv g N Wejnndvd kk kn rn okcd  ' vn  k  n kd ko kknS D   nkn   kv nsdsd   k]
+dgjodbfdj dk kks vks dev] nk k efewf'd ;kK mk; k k  cedsk 'knkef efssfseffe hu
+ k h1  ek v h1
+'<B>sd xcnb kmM KMf ewfs
+
+
+    <b>dfb;d  fdobbk km MKD FW fko vd bm ds mewqe dk km dfommsd kwe k m FmkWk gm dkm kmf bk fkm ksdm fkm msc udntilp umsdewnfjo smk cm ig msnoi jsacaaaaaaddedgewd dnoqf mkp[s a bm Ke fno  ONdvknjkc c  k  fk  ;sf
+        mnokbndfkonoksnfkdndfb mdsf mLKNjnndmk km  <main>odw ewr knjJgnNgjnjitnh qdd fn njxmib  mwq [ckkm kr ewmdmFaDD FQWWJNOPJQWLQNJNQ JNDWUIV GROPE FGG W WJKthndidw mdwerqs fpwdjvew fwe
+            fdf v fSBfoosDd KDd  km km Skm xcclM KF F k       v</main>
+    </b>
+</B>
+<h1>hey dude this us our website in the most needed time u will neddd us a lot ioq ok nfv  f lmf gr m mdd kmw fmm  n D m vd zvthi ss mfnkonjnd dvknf km K KMM   moKAFS gjkodsndkobnock fd</h1>

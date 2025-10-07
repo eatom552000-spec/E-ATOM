@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eatom - Leading renewable energy solutions for a sustainable future">
+    <meta name="keywords" content="renewable energy, sustainable solutions, Eatom energy">
+    <meta name="author" content="Eatom Team">
+    <title>Eatom - Leading Renewable Energy Solutions Company</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" defer>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Eatom <span>For Energy</span></h1>
+            </div>
+            <div class="theme-toggle">
+                <button id="theme-btn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <canvas id="particles-canvas" aria-hidden="true"></canvas>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="main-title">Leading the Renewable Energy World</h1>
+                <p class="subtitle">Sustainable Solutions for a Better Future</p>
+                <a href="index.html" id="continue-btn" class="cta-button">Continue to our website</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- الشاشة الثانية (تظهر بعد الضغط على الزر) -->
+    <div id="transition-screen" class="transition-screen hidden">
+        <canvas id="transition-canvas" aria-hidden="true"></canvas>
+        <div id="eatom-text" class="eatom-text hidden"></div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
